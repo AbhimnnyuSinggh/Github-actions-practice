@@ -1,0 +1,27 @@
+name: CICD
+
+on: 
+  workflow_dispatch:
+
+jobs :
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pulling the code
+        run: echo "The code has been successfully pulled or cloned"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Containerising the code
+        run: echo "The code has been contanerised"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testing the code
+        run: echo "The code has been successfully tested"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploying the successful code
+        run: echo "The code has been successfully deployed"
+      
