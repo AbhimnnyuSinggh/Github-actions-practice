@@ -68,7 +68,6 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: .
-
       - name: Deploying Pages
-        id: deployment   # 👈 REQUIRED for URL output
+        id: deployment   
         uses: actions/deploy-pages@v4
