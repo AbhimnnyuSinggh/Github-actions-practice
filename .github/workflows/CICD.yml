@@ -10,16 +10,19 @@ jobs :
       - name: Pulling the code
         run: echo "The code has been successfully pulled or cloned"
   build:
+    needs: [code]
     runs-on: ubuntu-latest
     steps:
       - name: Containerising the code
         run: echo "The code has been contanerised"
   test:
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: Testing the code
         run: echo "The code has been successfully tested"
   deploy:
+    needs: [test]
     runs-on: ubuntu-latest
     steps:
       - name: Deploying the successful code
