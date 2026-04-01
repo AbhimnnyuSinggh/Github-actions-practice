@@ -1,0 +1,17 @@
+name: Practice file
+
+on: 
+    push:
+        branches: [main]
+
+
+jobs:
+
+    deoply:
+        runs-on: ubuntu-latest
+        steps:
+            - name: This is a sample test
+              run: echo "Hello Dosto!"
+            
+            - name: Check the latest version of docker 
+              run: docker --version
