@@ -26,6 +26,7 @@ jobs:
         run: |
               python -m pip install --upgrade pip
               python -m pip install flake8
+              
       - name: Run linter
         run: python -m flake8 app.py
 
@@ -33,3 +34,36 @@ jobs:
         run: python app.py
 
 
+# PRACTICE
+
+# name: Python Version CI
+
+# on:
+#   push:
+#     branches: [main]
+
+# jobs:
+#   test:
+#     runs-on: ubuntu-latest
+#     strategy:
+#       matrix:
+#         python-version: ["3.9" , "3.10"]
+    
+#     steps:
+#       - name: Getting the code
+#         uses: actions/checkout@v4
+    
+#       - name: set-up python
+#         uses: actions/setup-python@v5
+#         with:
+#           python-version: ${{ matrix.python-version }}
+      
+#       - name: Install dependencies
+#         run: |
+#               python -m pip install --upgrade pip
+#               python -m pip install flake8
+#       - name: Run linter
+#         run: python -m flake8 app.py
+
+#       - name: Run app
+#         run: app.py
