@@ -1,9 +1,9 @@
-version: '3'
+version: '3.8'
 
 services:
-  app:
-  image: abhimnyusingh/github-actions-app:latest
-  container_name: my_app
-  ports: 
-    - "5000:5000"
-  restart: always
+  my_app:
+    image: abhimnyusingh/github-actions-app:main
+    container_name: my_app
+    ports:
+      - "80:80"
+    restart: always
