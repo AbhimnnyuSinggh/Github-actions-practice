@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Pull Docker Image
-        run: docker pull abhimnyusingh/github-actions-app:latest
+        run: docker pull abhimnyusingh/github-actions-app:main
 
       - name: Stop old container
         run: docker stop my_app || true
