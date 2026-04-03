@@ -25,3 +25,7 @@ jobs:
                 push: true
                 tags: |
                     ${{ vars.DOCKERHUB_USER }}/github-actions-app:${{ github.ref_name }}
+
+
+# Practice 
+
