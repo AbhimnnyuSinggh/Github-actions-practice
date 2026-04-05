@@ -1,5 +1,5 @@
 #To or interweave the tasks
-name: DevSecOps End To End Pipeline
+name: DevSecOps Pipeline Main
 
 on:
     push:
@@ -33,6 +33,7 @@ jobs:
     trivy: 
         needs: [build]
         uses: ./.github/workflows/image-scan.yml
+        secrets: inherit
 
 
     
